@@ -1,6 +1,48 @@
 import '../style/Home.css';
+import { useState } from 'react';
 
 export default function Home(){
+
+    const [faqData, setFaqData] = useState([
+        {
+          question: "How secure is my medical data?",
+          answer: "Your medical data is protected with enterprise-grade encryption and complies with HIPAA regulations. We use secure servers and regular security audits to ensure your information remains private and protected.",
+          open: false,
+        },
+        {
+          question: "Can I share access with my family members?",
+          answer: "Yes, our Pro and Enterprise plans include family sharing features. You can grant access to family members or caregivers while maintaining control over what information they can view and manage.",
+          open: false,
+        },
+        {
+          question: "How do medication reminders work?",
+          answer: "Medication reminders can be customized to your schedule. You'll receive notifications through the app, email, or SMS based on your preferences. The system is smart enough to adjust to time zones and daily routines.",
+          open: false,
+        },
+        {
+          question: "Can I export my health data?",
+          answer: "Yes, you can export your health data in various formats including PDF and CSV. This makes it easy to share reports with healthcare providers or keep personal records.",
+          open: false,
+        },
+        {
+          question: "What happens if I miss a medication reminder?",
+          answer: "If you miss a reminder, the app will send follow-up notifications based on your settings. Designated family members or caregivers can also be notified if you consistently miss medications.",
+          open: false,
+        },
+    ]);
+
+    function toggleFaq(index){
+        setFaqData(faqData.map((faq, i) => {
+            if(faq.open && i !== index){
+                return { ...faq, open: false };
+            }
+            if (i === index) {
+                return { ...faq, open: !faq.open };
+            }
+            return faq;
+        }))
+    }
+
     return (
         <div className="home-container">
             <div className="detail-container">
@@ -223,8 +265,177 @@ export default function Home(){
 
             </div>
 
+            <div className="review-container">
 
+                <div className="review-details">
+                    <h1 className="review-title">What Our Users Say</h1>
+                    <p className="review-description">Real experiences from people who trust MedTracker</p>
+                </div>
+
+                <div className="review-box-container">
+
+                    <div className="review-box">
+                        <div className="user-details">
+                            <div className='user-image first'>
+                                <h2 className='user-logo'>SJ</h2>
+                            </div>
+                            <div className='user-info'>
+                                <h3 className='user-name'>Sarah Johnson</h3>
+                                <p className='user-role'>Chronic Care Patient</p>
+                            </div>
+                        </div>
+                        <div className='review-content'>
+                            <p className='review-desc'>"MedTracker has completely transformed how I manage my medications. The reminders are reliable, and the interface is so intuitive. I haven't missed a single dose since I started using it!"</p>
+                            {Array(5).fill().map((_, index) => (
+                                <svg key={index} fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="review-box">
+                        <div className="user-details">
+                            <div className='user-image second'>
+                                <h2 className='user-logo'>MD</h2>
+                            </div>
+                            <div className='user-info'>
+                                <h3 className='user-name'>Michael Davis</h3>
+                                <p className='user-role'>Caregiver</p>
+                            </div>
+                        </div>
+                        <div className='review-content'>
+                            <p className='review-desc'>"As a caregiver for my elderly mother, this app has been a lifesaver. The family sharing feature helps us coordinate her care perfectly. Highly recommended!"</p>
+                            {Array(5).fill().map((_, index) => (
+                                <svg key={index} fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="review-box">
+                        <div className="user-details">
+                            <div className='user-image third'>
+                                <h2 className='user-logo'>EW</h2>
+                            </div>
+                            <div className='user-info'>
+                                <h3 className='user-name'>Emma Wilson</h3>
+                                <p className='user-role'>Healthcare Professional</p>
+                            </div>
+                        </div>
+                        <div className='review-content'>
+                            <p className='review-desc'>"I recommend MedTracker to all my patients. The detailed reports help me monitor their progress effectively, and the interface is user-friendly for all age groups."</p>
+                            {Array(5).fill().map((_, index) => (
+                                <svg key={index} fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="faq-container">
+
+                <div className="faq-details">
+                    <h1 className="faq-title">Frequently Asked Questions</h1>
+                    <p className="faq-description">Find answers to common questions about MedTracker</p>
+                </div>
+
+                <div className="faq-box-container">
+                    {
+                        faqData.map((faq, index) => (
+                            <div className="faq-box" key={index}>
+                                <div className='faq-question-container' onClick={() => toggleFaq(index)}>
+                                    <h3 className="faq-question">{faq.question}</h3>
+                                    <svg className={`${faq.open ? 'svg-rotate' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                                <p className={`faq-ans ${faq.open ? 'show' : ''}`}>{faq.answer}</p>
+                            </div>
+                        ))
+                    }
+                </div>
+
+            </div>
             
+            <div className='contact-container'>
+                <div className="contact-details">
+                    <h1 className="contact-title">Get In Touch</h1>
+                    <p className="contact-description">Have questions? We're here to help.</p>
+                </div>
+
+                <div className='contact-box-container'>
+
+                    <div className='contact-details-container'>
+                        <div className='contact-info'>
+                            <h3 className='contact-info-title'>Contact Information</h3>
+
+                            <div className='contact-details'>
+                                <svg className="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <p className='contact-content'>1-800-MEDTRACK</p>
+                            </div>
+
+                            <div className='contact-details'>
+                                <svg className="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <p className='contact-content'>support@medtracker.com</p>
+                            </div>
+
+                            <div className='contact-details'>
+                                <svg className="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <p className='contact-content'>123 Health Street, Medical District, NY 10001</p>
+                            </div>
+
+                        </div>
+                        <div className='timing-info'>
+                            <h3 className='timing-info-title'>Office Hours</h3>
+                            <div className='timing-details'>
+                                <p className='timing-content'>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p className='timing-content'>Saturday: 10:00 AM - 4:00 PM</p>
+                                <p className='timing-content'>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='contact-form'>
+                        <form className='contact-form-container'>
+                            <div className='form-group'>
+                                <label htmlFor='name'>Full Name</label>
+                                <input type='text' id='name' name='name' placeholder='Enter your name' required />
+                            </div>
+                            <div className='form-group'>
+                                <label htmlFor='email'>Email Address</label>
+                                <input type='email' id='email' name='email' placeholder='Enter your email' required />
+                            </div>
+                            <div className='form-group'>
+                                <label htmlFor='subject'>Subject</label>
+                                <select name="subject" id="subject">
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Billing Support">Billing Support</option>
+                                    <option value="Partnership Oppertunity">Partnership Oppertunity</option>
+                                </select>
+                            </div>
+                            <div className='form-group'>
+                                <label htmlFor='message'>Message</label>
+                                <textarea id='message' name='message' placeholder='Enter your message' required></textarea>
+                            </div>
+                            <button type='submit' className='contact-btn'>Submit</button>
+                        </form>
+                    </div>
+                    
+                </div>
+
+            </div>
         </div>
     )
 }

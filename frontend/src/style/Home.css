@@ -1,7 +1,7 @@
 .home-container .detail-container {
     display: flex;
     background-color: rgb(23 23 23);
-    padding: 0rem 4rem;
+    padding: 1rem 4rem;
 }
 
 .home-container .detail-container .left-container{
@@ -98,6 +98,7 @@
 }
 
 
+/* feature container */
 .home-container .feature-container {
     display: flex;
     flex-direction: column;
@@ -181,6 +182,7 @@
     color: rgb(75 85 99);
 }
 
+/* how it works container */
 .home-container .hiw-container{
     display: flex;
     flex-direction: column;
@@ -354,6 +356,7 @@
 }
 
 
+/* benifit container */
 .home-container .benifit-container {
     display: flex;
     flex-direction: column;
@@ -481,6 +484,343 @@
  
 
 
+/* review container */
+.home-container .review-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(23 23 23);
+    padding: 3rem 1.5rem; 
+    box-sizing: border-box;
+}
+
+.home-container .review-container .review-details {
+    text-align: center;
+}
+
+.home-container .review-container .review-details .review-title {
+    font-size: 2.3rem;
+    font-weight: 550;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.home-container .review-container .review-details .review-description {
+    font-size: 1.4rem;
+    font-weight: 100;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 0.5rem;
+    color: white;
+} 
+
+.home-container .review-box-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box; 
+}
+ 
+.home-container .review-box-container .review-box{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: rgb(38 38 38);
+}
+ 
+.home-container .review-box-container .review-box .user-details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.home-container .review-box-container .review-box .user-details .user-image{
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 26px;
+}
+ 
+.home-container .review-box-container .review-box .user-details .first{
+    background: rgb(17, 123, 223);
+}
+
+.home-container .review-box-container .review-box .user-details .second{
+    background: rgb(148, 17, 223);
+}
+
+.home-container .review-box-container .review-box .user-details .third{
+    background: rgb(49, 151, 18);
+}
+ 
+
+ 
+.home-container .review-box-container .review-box .user-details .user-image .user-logo{
+    margin: 12px 0;
+    text-align: center;
+}
+ 
+.home-container .review-box-container .review-box .user-details .user-info{
+    display: flex;
+    flex-direction: column;
+}
+ 
+.home-container .review-box-container .review-box .user-details .user-info .user-name{
+    margin: 4px 0;
+    color: white;
+}
+ 
+.home-container .review-box-container .review-box .user-details .user-info .user-role{
+   color: rgb(156 163 175);
+   margin: 4px 0;
+}
+
+.home-container .review-box-container .review-box .review-content .review-desc{
+    color: rgb(209 213 219);
+}
+
+.home-container .review-box-container .review-box .review-content svg{
+    width: 2rem;
+    height: 2rem;
+    color: rgb(228, 155, 21);
+}
+ 
+ 
+
+/* faq container */
+.home-container .faq-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: #e5e7eb;
+    padding: 3rem 1.5rem; 
+    box-sizing: border-box;
+}
+
+.home-container .faq-container .faq-details {
+    text-align: center;
+}
+
+.home-container .faq-container .faq-details .faq-title {
+    font-size: 2.3rem;
+    font-weight: 550;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.home-container .faq-container .faq-details .faq-description {
+    font-size: 1.4rem;
+    font-weight: 100;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 0.5rem;
+    color: black;
+} 
+
+
+.home-container .faq-box-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box; 
+    width: 100%;
+}
+ 
+.home-container .faq-box-container .faq-box{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgb(209, 208, 208);   
+    cursor: pointer;
+}
+ 
+.home-container .faq-box-container .faq-box:hover {
+    box-shadow: 2px 4px 10px rgb(169, 168, 168);
+}
+
+.home-container .faq-box-container .faq-box .faq-ans{
+    display: none;
+    color: rgb(79, 79, 80)
+}
+ 
+.home-container .faq-box-container .faq-box .show{
+    display: block;
+}
+
+.home-container .faq-box-container .faq-box .svg-rotate{
+    transform: rotate(180deg);
+}
+ 
+.home-container .faq-box-container .faq-box .faq-question-container{
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.home-container .faq-box-container .faq-box .faq-question-container svg{
+    width: 2rem;
+}
+ 
+
+
+/* contact container */
+.home-container .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(23 23 23);
+    padding: 3rem 1.5rem; 
+    box-sizing: border-box;
+}
+
+.home-container .contact-container .contact-details {
+    text-align: center;
+}
+
+.home-container .contact-container .contact-details .contact-title {
+    font-size: 2.3rem;
+    font-weight: 550;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.home-container .contact-container .contact-details .contact-description {
+    font-size: 1.4rem;
+    font-weight: 100;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 0.5rem;
+    color: white;
+} 
+
+.home-container .contact-box-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box; 
+    width: 100%;
+    gap: 3rem;
+}
+
+.home-container .contact-box-container .contact-details-container{
+    border: 1px solid rgb(209, 208, 208);
+    background-color: rgb(38 38 38);
+    padding: 2rem;
+    border-radius: 20px 0 20px 0;
+    width: 40%;
+}
+
+.home-container .contact-box-container .contact-details-container .contact-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-container .contact-box-container .contact-details-container .contact-info .contact-info-title{
+    color: white;
+    font-size: 1.5rem;
+    margin: 16px 0;
+}
+
+.home-container .contact-box-container .contact-details-container .contact-info .contact-details{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+}
+
+.home-container .contact-box-container .contact-details-container .contact-info .contact-details svg{
+    width: 1.6rem;
+    color: rgb(34 197 94);
+}
+
+.home-container .contact-box-container .contact-details-container .contact-info .contact-details .contact-content{
+    color: white;
+    margin: 7px 0;
+}
+
+.home-container .contact-box-container .contact-details-container .timing-info .timing-info-title{
+    color: white;
+}
+
+.home-container .contact-box-container .contact-details-container .timing-info .timing-details .timing-content{
+    color: white;
+    margin: 7px 0;
+}
+
+.home-container .contact-container .contact-box-container .contact-form{
+    border: 1px solid rgb(209, 208, 208);
+    background-color: rgb(38 38 38);
+    padding: 2rem;
+    border-radius: 0 20px 0 20px;
+    width: 40%;
+}
+
+.home-container .contact-container .contact-box-container .contact-form .contact-form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home-container .contact-container .contact-box-container .contact-form .contact-form-container .form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-container .contact-container .contact-box-container .contact-form .contact-form-container label{
+    padding: .5rem 0;
+    color: white;
+}
+
+.home-container .contact-container .contact-box-container .contact-form .contact-form-container input{
+    padding: .6rem;
+    border: 1px solid rgb(34 197 94);
+    border-radius: 10px;
+}
+
+.home-container .contact-container .contact-box-container .contact-form .contact-form-container input::placeholder{
+    color: rgb(122, 122, 122);
+    font-size: 0.9rem;
+}
+
+.home-container .contact-container .contact-box-container .contact-form .contact-form-container select{
+    padding: .6rem;
+    border: 1px solid rgb(34 197 94);
+    border-radius: 10px;
+    color: rgb(122, 122, 122);
+    font-size: 0.9rem;
+}
+
+.home-container .contact-container .contact-box-container .contact-form .contact-form-container textarea{
+    padding: 1rem;
+    border: 1px solid rgb(34 197 94);
+    border-radius: 10px;
+    color: rgb(122, 122, 122);
+}
+
+.home-container .contact-container .contact-box-container .contact-form .contact-form-container button{
+    padding: .6rem;
+    background-color: rgb(34 197 94);
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: none;
+}
+
+.home-container .contact-container .contact-box-container .contact-form .contact-form-container button:hover{
+    background-color: rgb(0, 139, 51);
+}
 
 
 
@@ -513,6 +853,7 @@
 
     .home-container .detail-container .left-container{
         width: 95%;
+        text-align: center
     }
    
     .home-container .detail-container .left-container .btn-container{
@@ -537,7 +878,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         padding: 2rem;
-        margin-right: 2rem;
+        align-content: center;
     }
    
     .home-container .detail-container .right-container .stats-container-main{
@@ -665,5 +1006,22 @@
     .home-container .benifit-container .benifit-box-container .benifit-container-right .benifit-box {
         height: auto;
     }
+ 
+    .home-container .contact-box-container{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .home-container .contact-box-container .contact-details-container{
+        width: 76%;
+        align-self: center;
+    }
+    
+    
+    .home-container .contact-container .contact-box-container .contact-form{
+        width: 76%;
+        align-self: center;
+    }
+
 
 }
