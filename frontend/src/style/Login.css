@@ -1,0 +1,222 @@
+.login-container{
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.login-container .login-box{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    border: 1px solid rgb(218 214 214);
+    border-radius: 12px;
+    box-shadow: 3px 3px 7px rgb(153 152 150);
+    width: 60%;
+}
+
+ 
+.login-container .login-box .login-details-container{
+    text-align: center;
+    padding: 4rem 0;
+    width: 40%;
+}
+ 
+.login-container .login-box .login-details{
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.login-container .login-box .login-details .login-title{
+    color: rgb(34 197 94);;
+    font-family: Inter, sans-serif, Inter, system-ui, sans-serif;
+    margin-bottom: 0;
+}
+
+.login-container .login-box .login-details .login-desc{
+    color: rgb(75 85 99);
+    font-size: 18px;
+    margin: 6px 0 16px 0;
+}
+
+
+.login-container .login-box .line{
+    background-color: rgb(218 214 214);
+    width: 1px;
+}
+
+ 
+.login-container .login-box .login-form-container{
+    padding: 1rem;
+    width: 54%;
+}
+ 
+.login-container .login-box .login-form-container .login-form .form-group{
+    padding: .7rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+ 
+ 
+.login-container .login-box .login-form-container .login-form .forgot-password{
+    display: flex;
+    justify-content: end;
+}
+ 
+.login-container .login-box .login-form-container .login-form .login-btn-container{
+    display: flex;
+}
+ 
+.login-container .login-box .login-form-container .login-form .forgot-password p{
+    margin: -5px 0 17px 0;
+    color: rgb(34 197 94);
+    font-size: 1rem;
+}
+ 
+.login-container .login-box .login-form-container .login-form .form-group label{
+    font-size: 1.2rem;
+    position: relative;
+}
+ 
+.login-container .login-box .login-form-container .login-form .form-group label span{
+    position: absolute;
+    font-size: .9rem;
+    color: red;
+}
+
+.login-container .login-box .login-form-container .login-form .form-group svg{
+    position: absolute;
+    width:1.2rem;
+    margin: 35px 0;
+    color: rgb(155 165 179);
+}
+
+/* need to implement */
+/* .login-container .login-box .login-form-container .login-form .form-group input .password-on{
+    position: absolute;
+    width:1.2rem;
+    margin: 35px 0;
+    color: rgb(155 165 179);
+} */
+ 
+.login-container .login-box .login-form-container .login-form .form-group input{
+    font-size: .9rem;
+    padding: .5rem 2rem;
+    border-radius: 0 !important;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+ 
+.login-container .login-box .login-form-container .login-form .login-btn{
+    background-color: rgb(34 197 94);
+    color: white;
+    border: none;
+    width: 100%;
+    font-size: .9rem;
+    padding: .7rem;
+    border-radius: 10px;
+}
+ 
+.login-container .login-box .login-form-container .login-form .login-btn:hover{
+    background-color: rgb(19, 148, 66);
+}
+
+
+.login-container .login-box .login-form-container .no-account{
+    font-size: 1rem;
+    padding: .5rem;
+    color: rgb(75 85 99);
+    text-align: center;
+}
+
+
+@media (max-width : 1068px) {
+
+    .login-container .login-box {
+        flex-wrap: wrap;
+        padding: 0;
+        width: 60%;
+     }
+ 
+     .login-container .login-box .login-details-container {
+         padding: 0;
+         width: auto;
+     }
+     .login-container .login-box .line{
+         display: none;
+     }
+     
+     .login-container .login-box .login-form-container{
+         width: 90%
+     }
+ 
+    .login-container .login-box .login-details {
+        padding-bottom: 0;
+    }
+    .login-container .login-box .login-details .login-desc {
+        margin-bottom: 0;
+    }
+    
+    .login-container .login-box .login-details .login-title{
+        font-size: 1.5rem;
+    }
+
+    .login-container .login-box .login-form-container{
+        width: 95%
+    }
+   
+} 
+
+@media (max-width: 768px) {
+    .login-container .login-box .line{
+        display: none;
+    }
+
+    .login-container .login-box {
+        width:100%;
+    }
+ 
+    .login-container .login-box .login-details {
+        padding-bottom: 0;
+    }
+    .login-container .login-box .login-details .login-desc {
+        margin-bottom: 0;
+    }
+    
+    .login-container .login-box .login-details .login-title{
+        font-size: 1.4rem;
+    }
+
+    .login-container .login-box .login-form-container{
+        width: 95%
+    }
+     
+    .login-container .login-box .login-form-container .login-form .form-group label{
+        font-size: 1rem;
+    }
+    
+    .login-container .login-box .login-form-container .login-form .form-group svg {
+        position: absolute;
+        width: 1rem;
+        margin: 32px 0;
+    }
+
+    .login-container .login-box .login-form-container .login-form .form-group input{
+        font-size: .8rem;
+        padding: .5rem 1.5rem;
+    }
+    
+    .login-container .login-box .login-form-container .login-form .forgot-password p {
+        font-size: .8rem;
+    }
+} 
